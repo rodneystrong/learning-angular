@@ -42,7 +42,9 @@
   <div class="hero-wrapper"> <!-- the word 'hero' is just an arbitrary word we're usin -->
     <div class="heroCard" ng-repeat="hero in avengers">
       <h2 class="heroName">{{hero.name}}</h2>
-      <h4 class="description">{{ hero.description }}</h4>
+      <!-- in the linde below, you'll see the ||. It's saying "if the left of me
+      comes back falsy, then do what's on the right of me" -->
+      <h4 class="description">{{ hero.description || 'This hero don\'t need a description' }}</h4>
       <h1>{{ $index }}</h1>
     </div>
   </div>
