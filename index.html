@@ -44,7 +44,16 @@
       <h2 class="heroName">{{hero.name}}</h2>
       <!-- in the linde below, you'll see the ||. It's saying "if the left of me
       comes back falsy, then do what's on the right of me" -->
-      <h4 class="description">{{ hero.description || 'This hero don\'t need a description' }}</h4>
+
+      <div class="hero-image">
+        <!-- in the line below we'll see how to grab the img. notice how the '.' is used to
+        include the necessary period for the file extention. remember, if you look
+        at the actual value of the object key, 'path' only includes the url path
+        and 'extension' doesn't include the '.'. this is why we put the '.' between
+        the curly braces -->
+        <img ng-src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}" alt="" />
+      </div>
+      <h4 class="description">{{ hero.description || 'This hero don\'t need a description' }}</h4>  
       <h1>{{ $index }}</h1>
     </div>
   </div>

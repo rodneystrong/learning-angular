@@ -20,3 +20,21 @@
 .heroName {
     color: #D11C24;
 }
+
+.description {
+    font-size: .7em;
+}
+.hero-image {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0A2933;
+    border-radius: 50%;
+    transition-property: border-radius;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+}
