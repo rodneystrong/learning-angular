@@ -5,6 +5,9 @@ angular
 
     $scope.test = "it's working!!";
 
+
+    //By the way, never hard code your data like below.
+    //This is purely for demo/learning purposes
     var teamAvengers = [
       {
           "id": 1009368,
@@ -162,6 +165,7 @@ angular
 
   }); //end MainCtrl
 
+  
 
 /*
 angular.module('cool-app')

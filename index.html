@@ -32,6 +32,10 @@
     </div>
   </div>-->
 
+  <!-- this is called filtering!! we want to type in 'hulk', and have only the hulk card show up -->
+  <!-- go to the .heroCard -->
+  <input type="text" ng-model="filterText" name="name" value="">
+
   <div class="hero-wrapper">
     Above you see that I called Iron Man. Below you'll see that the array teamAvengers
     is repeated (using ng-repeat) without us having to manually copy/paste that
@@ -40,7 +44,7 @@
 
   <!-- with ng-repeat we can loop through an array! -->
   <div class="hero-wrapper"> <!-- the word 'hero' is just an arbitrary word we're usin -->
-    <div class="heroCard" ng-repeat="hero in avengers">
+    <div class="heroCard" ng-repeat="hero in avengers | filter: filterText">
       <h2 class="heroName">{{hero.name}}</h2>
       <!-- in the linde below, you'll see the ||. It's saying "if the left of me
       comes back falsy, then do what's on the right of me" -->
@@ -53,7 +57,7 @@
         the curly braces -->
         <img ng-src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}" alt="" />
       </div>
-      <h4 class="description">{{ hero.description || 'This hero don\'t need a description' }}</h4>  
+      <h4 class="description">{{ hero.description || 'This hero don\'t need a description' }}</h4>
       <h1>{{ $index }}</h1>
     </div>
   </div>
