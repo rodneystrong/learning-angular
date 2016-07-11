@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Avengers!</title>
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-controller="MainCtrl">
 
@@ -14,9 +15,38 @@
 
   <div class="hero-wrapper">
     <div class="heroCard">
-      
+      <h2 class="heroName">{{avengers[0].name}}</h2>
     </div>
   </div>
+
+  <!-- instead of doing the code below and manually pasting this, we're gonna use a directive called ng-repeat!
+  <div class="hero-wrapper">
+    <div class="heroCard">
+      <h2 class="name">{{avengers[0].name}}</h2>
+    </div>
+  </div>
+
+  <div class="hero-wrapper">
+    <div class="heroCard">
+      <h2 class="name">{{avengers[0].name}}</h2>
+    </div>
+  </div>-->
+
+  <div class="hero-wrapper">
+    Above you see that I called Iron Man. Below you'll see that the array teamAvengers
+    is repeated (using ng-repeat) without us having to manually copy/paste that
+    same heroCard.
+  </div>
+
+  <!-- with ng-repeat we can loop through an array! -->
+  <div class="hero-wrapper"> <!-- the word 'hero' is just an arbitrary word we're usin -->
+    <div class="heroCard" ng-repeat="hero in avengers">
+      <h2 class="heroName">{{hero.name}}</h2>
+      <h4 class="description">{{ hero.description }}</h4>
+      <h1>{{ $index }}</h1>
+    </div>
+  </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
