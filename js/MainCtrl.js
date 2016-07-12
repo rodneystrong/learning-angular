@@ -162,10 +162,16 @@ angular
   ];
 
   $scope.avengers = teamAvengers;
+  }) //end controller
+
+  //creating a service
+  .service('dataService', function() {
+    this.
+  }); //end service
 
   }); //end MainCtrl
 
-  
+
 
 /*
 angular.module('cool-app')
