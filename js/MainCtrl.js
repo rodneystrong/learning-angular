@@ -7,11 +7,17 @@ angular
 
     $scope.test = "it's working!!";
 
+    //we want to display the data when we invoke the func below.
+    //how do we display daata? by setting it to scope of the object
+    $scope.getHeroes = function() {
+      $scope.avengers = dataService.avengers;
+    };
+
 
     //By the way, never hard code your data like below.
     //This is purely for demo/learning purposes
 
-    $scope.avengers = teamAvengers;
+    //$scope.avengers = teamAvengers;
   }); //end controller
 
   //}); //end MainCtrl
@@ -31,3 +37,7 @@ angular.module('cool-app')
 
 });
 */
+
+//create a new array that has objects with only
+//name, description, and thumbnail. set the new
+//array to this.avengers

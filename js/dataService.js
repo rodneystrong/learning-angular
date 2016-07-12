@@ -156,3 +156,5 @@ angular
         }
     }
   ];
+
+  this.avengers = teamAvengers;
