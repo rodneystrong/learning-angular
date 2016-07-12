@@ -1,7 +1,9 @@
 //
 angular
   .module('avengerApp')
-  .controller('MainCtrl', function($scope) {
+  .controller('MainCtrl', function($scope, dataService) {
+
+    console.log(dataService.car);
 
     $scope.test = "it's working!!";
 
@@ -166,10 +168,10 @@ angular
 
   //creating a service
   .service('dataService', function() {
-    this.
+
   }); //end service
 
-  }); //end MainCtrl
+  //}); //end MainCtrl
 
 
 
